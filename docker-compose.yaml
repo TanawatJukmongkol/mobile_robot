@@ -1,0 +1,26 @@
+
+services:
+  ros_docker:
+    container_name: ros_docker
+    hostname: ros_docker
+    build: src/ros_docker
+    stdin_open: true
+    tty: true
+    privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_QPA_PLATFORM=xcb
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/tmp/.docker.xauth
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${XAUTH:-$HOME/.Xauthority}:/tmp/.docker.xauth:ro
+    networks:
+      - ros_docker
+    devices:
+      - /dev/dri:/dev/dri
+
+networks:
+  ros_docker:
+    driver: bridge
+
