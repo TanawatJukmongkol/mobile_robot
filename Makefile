@@ -24,4 +24,4 @@ shell-node-robot1:
 	@ xhost +local:docker
 	@ ${SHELL_CMD} node_robot1 bash
 
-.PHONY: all build shell
+.PHONY: all build up down shell-ros_docker shell-node-robot1
