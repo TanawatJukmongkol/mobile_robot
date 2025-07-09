@@ -5,10 +5,16 @@ SHELL_CMD = \
 		--remove-orphans \
 		-it
 
-all: build
+all: build up
 
 build:
 	@ docker compose build
+
+up:
+	@ docker compose up
+
+down:
+	@ docker compose down
 
 shell-ros_docker:
 	@ xhost +local:docker
