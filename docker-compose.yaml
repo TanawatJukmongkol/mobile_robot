@@ -1,6 +1,16 @@
 
 services:
+  node_robot1:
+    image: node_robot1
+    container_name: node_robot1
+    hostname: node_robot1
+    build: src/nodes/robot1
+    networks:
+      - ros_docker
+    depends_on:
+      - ros_docker
   ros_docker:
+    image: ros_docker
     container_name: ros_docker
     hostname: ros_docker
     build: src/ros_docker
@@ -8,6 +18,7 @@ services:
     tty: true
     privileged: true
     environment:
+      - XDG_RUNTIME_DIR=/tmp/runtime-ubuntu
       - DISPLAY=${DISPLAY}
       - QT_QPA_PLATFORM=xcb
       - QT_X11_NO_MITSHM=1
@@ -22,5 +33,4 @@ services:
 
 networks:
   ros_docker:
-    driver: bridge
-
+    name: ros_docker

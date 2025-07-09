@@ -11,10 +11,16 @@ RUN			apt-get install -y \
 			ros-dev-tools \
 			ros-jazzy-desktop
 
+# Install system utilities
+RUN			apt-get install -y \
+			iproute2
+
 RUN			chown -R 1000:users /tmp
 RUN			chmod 0700 /tmp
 
-COPY		entry.sh /entry.sh
-WORKDIR		/home/ubuntu
-ENTRYPOINT	[ "bash", "/entry.sh" ]
+# Copies setup and entrypoint hooks.
+COPY		tools/setup.sh /setup.sh
+COPY		tools/entry.sh /ros_entrypoint.sh
 
+WORKDIR		/home/ubuntu
+ENTRYPOINT	[ "bash", "/ros_entrypoint.sh" ]
