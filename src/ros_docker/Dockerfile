@@ -18,9 +18,10 @@ RUN			apt-get install -y \
 RUN			chown -R 1000:users /tmp
 RUN			chmod 0700 /tmp
 
-# Copies setup and entrypoint hooks.
-COPY		tools/setup.sh /setup.sh
-COPY		tools/entry.sh /ros_entrypoint.sh
+# Copies setup and entrypoint hooks
+RUN			rm -f /ros_entrypoint.sh
+COPY		tools/global_setup.sh /global_setup.sh
+COPY		tools/global_entry.sh /global_entry.sh
 
 WORKDIR		/home/ubuntu
-ENTRYPOINT	[ "bash", "/ros_entrypoint.sh" ]
+ENTRYPOINT	[ "bash", "/global_entry.sh" ]

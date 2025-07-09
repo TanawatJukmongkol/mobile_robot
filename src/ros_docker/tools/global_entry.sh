@@ -6,9 +6,12 @@ echo "Loading ROS ($ROS_DISTRO) entry hook..."
 source "/opt/ros/$ROS_DISTRO/setup.bash" --
 
 # User environment setup (can be copied in from /setup.sh)
-if [ -e "/setup.sh" ]; then
+
+runuser -u ubuntu /usr/bin/env bash /global_setup.sh
+
+if [ -f "/setup.sh" ]; then
   echo "Run setup hook..."
-  source /setup.sh
+  runuser -u ubuntu /usr/bin/env bash /setup.sh
 fi
 
 # Runs either shell hook or entrypoint (depending on development mode)

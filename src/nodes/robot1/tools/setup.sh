@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-touch /home/ubuntu/test_hello
+touch ~/test_hello
