@@ -9,6 +9,17 @@ services:
       - ros_docker
     depends_on:
       - ros_docker
+  
+  node_robot2:
+    image: node_robot2
+    container_name: node_robot2
+    hostname: node_robot2
+    build: src/nodes/robot2
+    networks:
+      - ros_docker
+    depends_on:
+      - ros_docker
+
   ros_docker:
     image: ros_docker
     container_name: ros_docker
