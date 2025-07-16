@@ -1,0 +1,33 @@
+[0.909s] Invoking command in '/home/ubuntu/ros2_ws/src/turtle_training': PYTHONPATH=/home/ubuntu/ros2_ws/build/turtle_training/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_training build --build-base /home/ubuntu/ros2_ws/build/turtle_training/build install --record /home/ubuntu/ros2_ws/build/turtle_training/install.log --single-version-externally-managed install_data
+[1.175s] running egg_info
+[1.175s] creating ../../build/turtle_training/turtle_training.egg-info
+[1.189s] writing ../../build/turtle_training/turtle_training.egg-info/PKG-INFO
+[1.190s] writing dependency_links to ../../build/turtle_training/turtle_training.egg-info/dependency_links.txt
+[1.190s] writing requirements to ../../build/turtle_training/turtle_training.egg-info/requires.txt
+[1.190s] writing top-level names to ../../build/turtle_training/turtle_training.egg-info/top_level.txt
+[1.190s] writing manifest file '../../build/turtle_training/turtle_training.egg-info/SOURCES.txt'
+[1.220s] reading manifest file '../../build/turtle_training/turtle_training.egg-info/SOURCES.txt'
+[1.220s] adding license file 'LICENSE'
+[1.221s] writing manifest file '../../build/turtle_training/turtle_training.egg-info/SOURCES.txt'
+[1.221s] running build
+[1.221s] running build_py
+[1.221s] creating /home/ubuntu/ros2_ws/build/turtle_training/build
+[1.221s] creating /home/ubuntu/ros2_ws/build/turtle_training/build/lib
+[1.221s] creating /home/ubuntu/ros2_ws/build/turtle_training/build/lib/turtle_training
+[1.222s] copying turtle_training/__init__.py -> /home/ubuntu/ros2_ws/build/turtle_training/build/lib/turtle_training
+[1.222s] running install
+[1.229s] running install_lib
+[1.245s] creating /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training
+[1.245s] copying /home/ubuntu/ros2_ws/build/turtle_training/build/lib/turtle_training/__init__.py -> /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training
+[1.246s] byte-compiling /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training/__init__.py to __init__.cpython-312.pyc
+[1.246s] running install_data
+[1.246s] creating /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index
+[1.246s] creating /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index/resource_index
+[1.246s] creating /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index/resource_index/packages
+[1.246s] copying resource/turtle_training -> /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index/resource_index/packages
+[1.246s] copying package.xml -> /home/ubuntu/ros2_ws/install/turtle_training/share/turtle_training
+[1.247s] running install_egg_info
+[1.264s] Copying ../../build/turtle_training/turtle_training.egg-info to /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training-0.0.0-py3.12.egg-info
+[1.264s] running install_scripts
+[1.385s] writing list of installed files to '/home/ubuntu/ros2_ws/build/turtle_training/install.log'
+[1.416s] Invoked command in '/home/ubuntu/ros2_ws/src/turtle_training' returned '0': PYTHONPATH=/home/ubuntu/ros2_ws/build/turtle_training/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_training build --build-base /home/ubuntu/ros2_ws/build/turtle_training/build install --record /home/ubuntu/ros2_ws/build/turtle_training/install.log --single-version-externally-managed install_data

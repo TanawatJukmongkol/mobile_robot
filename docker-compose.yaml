@@ -1,47 +1,23 @@
 
 services:
-  node_robot1:
-    image: node_robot1
-    container_name: node_robot1
-    hostname: node_robot1
-    build: src/nodes/robot1
-    networks:
-      - ros_docker
-    depends_on:
-      - ros_docker
-  
-  node_robot2:
-    image: node_robot2
-    container_name: node_robot2
-    hostname: node_robot2
-    build: src/nodes/robot2
-    networks:
-      - ros_docker
-    depends_on:
-      - ros_docker
-
-  ros_docker:
-    image: ros_docker
-    container_name: ros_docker
-    hostname: ros_docker
-    build: src/ros_docker
-    stdin_open: true
-    tty: true
-    privileged: true
-    environment:
-      - XDG_RUNTIME_DIR=/tmp/runtime-ubuntu
-      - DISPLAY=${DISPLAY}
-      - QT_QPA_PLATFORM=xcb
-      - QT_X11_NO_MITSHM=1
-      - XAUTHORITY=/tmp/.docker.xauth
+  node_1:
+    extends:
+      service: ros_docker
+      file: ./src/ros_docker/docker-compose.yaml
+    build:
+      context: ./src/nodes/node_1
     volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      - ${XAUTH:-$HOME/.Xauthority}:/tmp/.docker.xauth:ro
-    networks:
-      - ros_docker
-    devices:
-      - /dev/dri:/dev/dri
-
-networks:
-  ros_docker:
-    name: ros_docker
+      - ./src/nodes/node_1/ros2_ws:/home/ubuntu/ros2_ws
+    image: node_1
+    container_name: node_1
+    hostname: node_1
+  
+  # node_2:
+  #   extends:
+  #     service: ros_docker
+  #     file: ./src/ros_docker/docker-compose.yaml
+  #   build:
+  #     context: ./src/nodes/node_2
+  #   image: node_2
+  #   container_name: node_2
+  #   hostname: node_2

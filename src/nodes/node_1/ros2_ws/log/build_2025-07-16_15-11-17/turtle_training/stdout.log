@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/turtle_training/turtle_training.egg-info
+writing ../../build/turtle_training/turtle_training.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtle_training/turtle_training.egg-info/dependency_links.txt
+writing requirements to ../../build/turtle_training/turtle_training.egg-info/requires.txt
+writing top-level names to ../../build/turtle_training/turtle_training.egg-info/top_level.txt
+writing manifest file '../../build/turtle_training/turtle_training.egg-info/SOURCES.txt'
+reading manifest file '../../build/turtle_training/turtle_training.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/turtle_training/turtle_training.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ubuntu/ros2_ws/build/turtle_training/build
+creating /home/ubuntu/ros2_ws/build/turtle_training/build/lib
+creating /home/ubuntu/ros2_ws/build/turtle_training/build/lib/turtle_training
+copying turtle_training/__init__.py -> /home/ubuntu/ros2_ws/build/turtle_training/build/lib/turtle_training
+running install
+running install_lib
+creating /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training
+copying /home/ubuntu/ros2_ws/build/turtle_training/build/lib/turtle_training/__init__.py -> /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training
+byte-compiling /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index
+creating /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index/resource_index
+creating /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index/resource_index/packages
+copying resource/turtle_training -> /home/ubuntu/ros2_ws/install/turtle_training/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuntu/ros2_ws/install/turtle_training/share/turtle_training
+running install_egg_info
+Copying ../../build/turtle_training/turtle_training.egg-info to /home/ubuntu/ros2_ws/install/turtle_training/lib/python3.12/site-packages/turtle_training-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/ubuntu/ros2_ws/build/turtle_training/install.log'

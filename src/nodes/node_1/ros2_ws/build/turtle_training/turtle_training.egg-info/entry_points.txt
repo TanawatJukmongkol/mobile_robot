@@ -1,0 +1,2 @@
+[console_scripts]
+turtle_pubsub = turtle_training.pubsub:main

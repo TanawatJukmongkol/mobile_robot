@@ -1,31 +1,33 @@
 
-SHELL_CMD = \
-	docker compose run \
-		--rm \
-		--remove-orphans \
-		-it
-
 all: build up
 
 build:
-	@ docker compose build
+	@ docker compose \
+	  -f docker-compose.yaml \
+	  -f src/ros_docker/docker-compose.yaml \
+	  build
 
 up:
-	@ docker compose up
+	@ docker compose \
+	-f docker-compose.yaml \
+	-f src/ros_docker/docker-compose.yaml \
+	up
 
 down:
-	@ docker compose down
+	@ docker compose \
+	-f docker-compose.yaml \
+	-f src/ros_docker/docker-compose.yaml \
+	down
 
-shell-ros_docker:
+%.shell: build
 	@ xhost +local:docker
-	@ ${SHELL_CMD} ros_docker bash
+	@ docker compose \
+		-f docker-compose.yaml \
+		-f src/ros_docker/docker-compose.yaml \
+		run \
+		--rm \
+		--remove-orphans \
+		-it \
+		"$(basename $@)" bash
 
-shell-node-robot1:
-	@ xhost +local:docker
-	@ ${SHELL_CMD} node_robot1 bash
-
-shell-node-robot2:
-	@ xhost +local:docker
-	@ ${SHELL_CMD} node_robot2 bash
-
-.PHONY: all build up down shell-ros_docker shell-node-robot1
+.PHONY: all build up down

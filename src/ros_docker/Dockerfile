@@ -11,9 +11,12 @@ RUN			apt-get install -y \
 			ros-dev-tools \
 			ros-jazzy-desktop
 
-# Install system utilities
+# Install system utilities, annd packages
 RUN			apt-get install -y \
 			iproute2
+
+RUN			apt-get install -y \
+			python3-pip
 
 RUN			chown -R 1000:users /tmp
 RUN			chmod 0700 /tmp
