@@ -1,1 +1,0 @@
-/home/ubuntu/ros2_ws/src/turtle_training/setup.py

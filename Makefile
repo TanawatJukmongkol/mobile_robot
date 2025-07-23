@@ -1,5 +1,5 @@
 
-all: build up
+all: up
 
 build:
 	@ docker compose \
@@ -7,11 +7,17 @@ build:
 	  -f src/ros_docker/docker-compose.yaml \
 	  build
 
-up:
+up: build
 	@ docker compose \
 	-f docker-compose.yaml \
 	-f src/ros_docker/docker-compose.yaml \
 	up
+
+daemon: build
+	@ docker compose \
+	-f docker-compose.yaml \
+	-f src/ros_docker/docker-compose.yaml \
+	up -d
 
 down:
 	@ docker compose \
@@ -59,4 +65,4 @@ down:
 		-it \
 		"$(basename $@)" ""
 
-.PHONY: all build up down
+.PHONY: all build up daemon down
