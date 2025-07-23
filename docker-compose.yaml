@@ -12,12 +12,14 @@ services:
     container_name: node_1
     hostname: node_1
   
-  # node_2:
-  #   extends:
-  #     service: ros_docker
-  #     file: ./src/ros_docker/docker-compose.yaml
-  #   build:
-  #     context: ./src/nodes/node_2
-  #   image: node_2
-  #   container_name: node_2
-  #   hostname: node_2
+  node_2:
+    extends:
+      service: ros_docker
+      file: ./src/ros_docker/docker-compose.yaml
+    build:
+      context: ./src/nodes/node_2
+    volumes:
+      - ./src/nodes/node_2/ros2_ws:/home/ubuntu/ros2_ws
+    image: node_2
+    container_name: node_2
+    hostname: node_2

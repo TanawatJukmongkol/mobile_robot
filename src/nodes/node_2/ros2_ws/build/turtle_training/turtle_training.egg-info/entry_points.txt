@@ -1,0 +1,3 @@
+[console_scripts]
+turtle_pubsub = turtle_training.pubsub:main
+turtle_service = turtle_training.service_turtle:main
