@@ -4,6 +4,7 @@ A basic ROS2 docker framework for composing multiple nodes.
 
 # Structure
 
+```
 mobile_robot
 |- .git
 |- .gitignore
@@ -19,6 +20,7 @@ mobile_robot
     |           |- entry.sh (runs the robot service / node. Ex: `ros2 run my_node`)
     |           |- setup.sh (used for setting up the environment, etc.)
     |- ros_docker (the parent template docker node)
+```
 
 # Usage
 
