@@ -11,6 +11,8 @@ services:
     image: node_1
     container_name: node_1
     hostname: node_1
+    depends_on:
+      - ros_docker
   
   node_2:
     extends:
@@ -23,3 +25,5 @@ services:
     image: node_2
     container_name: node_2
     hostname: node_2
+    depends_on:
+      - ros_docker
